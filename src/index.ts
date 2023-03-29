@@ -13,7 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('message_create', message => {
-    if (message.body === 'Hello') {
+    if (message.body === 'hello') {
         message.reply('world');
     }
     const command = message.body.split(' ')[0];
