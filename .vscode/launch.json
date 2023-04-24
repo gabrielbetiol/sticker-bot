@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug",
+            "preLaunchTask": "npm: compile",
+            "program": "${workspaceFolder}/src/index.ts",
+            // "outFiles": ["${workspaceFolder}/**/*.js"],
+            "skipFiles": ["<node_internals>/**"]
+        }
+    ]
+}

@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npx nodemon",
+    "dev": "nodemon --watch src/ --exec \"ts-node src/index.ts ENVIRONMENT=dev\" -e ts",
+    "build": "npm run compile",
+    "compile": "tsc",
+    "debug": "nodemon --inspect src/ --exec \"ts-node src/index.ts ENVIRONMENT=dev\" -e ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,9 +29,14 @@
   "dependencies": {
     "@types/lodash": "^4.14.192",
     "axios": "^1.3.4",
+    "concat-stream": "^2.0.0",
+    "gifify": "^2.4.3",
+    "mime-types": "^2.1.35",
     "qrcode-terminal": "^0.12.0",
     "source-map-loader": "^4.0.1",
+    "stream-to-buffer": "^0.1.0",
     "ts-loader": "^9.4.2",
+    "wa-sticker-formatter": "^4.4.4",
     "whatsapp-web.js": "^1.19.5"
   },
   "devDependencies": {
